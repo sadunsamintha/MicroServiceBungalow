@@ -1,0 +1,29 @@
+### Spring properties
+# Service registers under this name
+spring:
+  application:
+    name: Region-Microservice
+
+# Discovery Server Access
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:1112/eureka/
+
+# HTTP Server (Tomcat) Port
+server:
+  port: 2221
+
+# Disable Spring Boot's "Whitelabel" default error page, so we can use our own
+error:
+  whitelabel:
+    enabled: false
+
+#mongodb
+spring.data.mongodb.host : localhost
+spring.data.mongodb.port : 27017
+spring.data.mongodb.database : RegionDB
+
+#logging
+logging.level.org.springframework.data : debug
+logging.level. : info
