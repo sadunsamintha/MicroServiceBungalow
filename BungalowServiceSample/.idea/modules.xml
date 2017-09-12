@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BungalowServiceSample.iml" filepath="$PROJECT_DIR$/.idea/modules/BungalowServiceSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BungalowServiceSample_main.iml" filepath="$PROJECT_DIR$/.idea/modules/BungalowServiceSample_main.iml" group="BungalowServiceSample" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BungalowServiceSample_test.iml" filepath="$PROJECT_DIR$/.idea/modules/BungalowServiceSample_test.iml" group="BungalowServiceSample" />
+    </modules>
+  </component>
+</project>
