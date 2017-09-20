@@ -19,11 +19,12 @@ public class Bungalow {
 	String bungalowImageURL;
 	String maximumOccupancy;
 	AdditionalDetails additionalDetails;
+	String regionName;
 
 
 	public Bungalow() {	}
 
-	public Bungalow(String name, String regionId, String bungalowCode, String bungalowRate, String address, String contactNumber, String bungalowImageURL, String maximumOccupancy, AdditionalDetails additionalDetails) {
+	public Bungalow(String name, String regionId, String bungalowCode, String bungalowRate, String address, String contactNumber, String bungalowImageURL, String maximumOccupancy, AdditionalDetails additionalDetails,String regionName) {
 		this.name = name;
 		this.regionId = regionId;
 		this.bungalowCode = bungalowCode;
@@ -33,6 +34,7 @@ public class Bungalow {
 		this.bungalowImageURL = bungalowImageURL;
 		this.maximumOccupancy = maximumOccupancy;
 		this.additionalDetails = additionalDetails;
+		this.regionName = regionName;
 	}
 
 	public String getName() {
@@ -106,4 +108,13 @@ public class Bungalow {
 	public void setAdditionalDetails(AdditionalDetails additionalDetails) {
 		this.additionalDetails = additionalDetails;
 	}
+
+	public String getRegionName() {
+		return regionName;
+	}
+
+	public void setRegionName(String regionName) {
+		this.regionName = regionName;
+	}
+	
 }

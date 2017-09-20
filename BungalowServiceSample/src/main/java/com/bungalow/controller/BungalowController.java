@@ -25,9 +25,10 @@ public class BungalowController {
   }
 
   @RequestMapping(method = RequestMethod.GET, value= "/bungalow/{name}")
-  public List<Bungalow> getBungalow(@PathVariable("name") String name){
+  public Bungalow getBungalow(@PathVariable("name") String name){
 
-      return bungalowService.findBungalow(name);
+       Bungalow bungalow= bungalowService.findBungalow(name);
+       return bungalow;
   }
 
   @RequestMapping("/bungalows")

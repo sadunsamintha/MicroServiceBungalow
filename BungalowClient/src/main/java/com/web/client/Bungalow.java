@@ -5,14 +5,18 @@ package com.web.client;
 
 
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Bungalow {
+import java.io.Serializable;
+public class Bungalow implements Serializable{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 
 	String name;
 	String regionId;
+	String regionName;
 	String bungalowCode;
 	String bungalowRate;
 	String address;
@@ -20,6 +24,7 @@ public class Bungalow {
 	String bungalowImageURL;
 	String maximumOccupancy;
 	AdditionalDetails additionalDetails;
+	
 
 
 	public Bungalow() {	}
@@ -34,6 +39,7 @@ public class Bungalow {
 		this.bungalowImageURL = bungalowImageURL;
 		this.maximumOccupancy = maximumOccupancy;
 		this.additionalDetails = additionalDetails;
+		
 	}
 
 	public String getName() {
@@ -79,6 +85,15 @@ public class Bungalow {
 	public String getContactNumber() {
 		return contactNumber;
 	}
+	
+
+	public String getRegionName() {
+		return regionName;
+	}
+
+	public void setRegionName(String regionName) {
+		this.regionName = regionName;
+	}
 
 	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
@@ -107,4 +122,5 @@ public class Bungalow {
 	public void setAdditionalDetails(AdditionalDetails additionalDetails) {
 		this.additionalDetails = additionalDetails;
 	}
+	
 }

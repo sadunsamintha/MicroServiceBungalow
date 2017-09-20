@@ -1,10 +1,13 @@
 buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.5.RELEASE")
-    }
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
 }
 
 apply plugin: 'java'
@@ -12,19 +15,18 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
-dependencyManagement {
-    imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Camden.SR5'
-    }
+
+
+
+
+ext {
+	springCloudVersion = 'Dalston.SR3'
 }
 
-jar {
-    baseName = 'gs-spring-boot'
-    version =  '0.1.0'
-}
 
 repositories {
     mavenCentral()
+    
 }
 
 sourceCompatibility = 1.8
@@ -32,12 +34,15 @@ targetCompatibility = 1.8
 
 dependencies {
 
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
-    compile("org.hsqldb : hsqldb")
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.boot:spring-boot-starter-actuator')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
     compile('org.springframework.cloud:spring-cloud-starter-eureka-server')
-    compile ("org.springframework.cloud:spring-cloud-starter")
-    compile ("org.springframework.boot:spring-boot-starter-parent")
+    
 
+}
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }

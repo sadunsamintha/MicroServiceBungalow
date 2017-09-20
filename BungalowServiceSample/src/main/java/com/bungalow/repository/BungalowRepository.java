@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface BungalowRepository extends MongoRepository<Bungalow, String>{
 
-    List<Bungalow> findByName(String name);
+    Bungalow findByName(String name);
     List<Bungalow> removeByName(String name);
 }

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="<c:url value="resources/styles/bootstrap/3.3.5/css/bootstrap.min.css" />" />
     <link rel="stylesheet" href="<c:url value="resources/styles/bootstrap/3.3.5/css/bootstrap-theme.min.css" />" />
     <link rel="stylesheet" href="<c:url value="resources/styles/pivotal.css" />" />
-	<title>spring-microservices: Bugalow List</title>
+	<title>spring-microservices: Bungalow List</title>
 </head>
 
 <body>
@@ -45,7 +45,8 @@
 
 			<ul>
 				<c:forEach items="${bungalows}" var="bungalow">
-					<li><a href="bungalowDetails">${bundalow.name}</a></li>
+					<li><a href="bungalowDetails?name=${bungalow.name}">${bungalow.name}</a></li>
+					
 				</c:forEach>
 			</ul>
 					

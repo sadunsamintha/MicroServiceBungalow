@@ -10,7 +10,7 @@ public interface BungalowService {
     void addBungalow(Bungalow bungalow);
 	List<Bungalow> getAllBungalows();
 	Bungalow updateBungalow(Bungalow bungalow);
-	List<Bungalow> findBungalow(String name);
+	Bungalow findBungalow(String id);
 	String deleteBungalow(Bungalow bungalow);
 	List<Bungalow> removeByName(String name);
 }

@@ -9,3 +9,7 @@ eureka:
 # HTTP (Tomcat) port
 server:
   port: 1112
+  
+management: 
+  security:
+    enabled: false
